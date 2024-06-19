@@ -15,7 +15,7 @@ sudo apt update
 
 sudo apt install openjdk-11-jdk
 
-<span style="color: green"> ***Spring Boot 3.3 requires Java 17 or newer due to compatibility issues with older Java versions. If you haven't already installed Java 17, follow these steps:*** </span>
+<code style="color: green"> ***Spring Boot 3.3 requires Java 17 or newer due to compatibility issues with older Java versions. If you haven't already installed Java 17, follow these steps:*** </code>
 
 sdk install java 17.0.1-open
 sdk use java 17.0.1-open
