@@ -67,7 +67,7 @@ spring --version
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
 
-<code style="color: green">*Restart Terminal*</span>
+<code style="color: green">*Restart Terminal*</code>
 
 ### INSTALL LATEST LTS Version of Node.js
 
