@@ -1,17 +1,14 @@
-
----
-
 ## BACKEND SETUP GUIDE FOR WSL
 
----
+</br>
 
 <code style="color: green">*Run the following commands one at the time in a new terminal within the folder ./backend*</code>
 
 ### UPDATE THE LOCAL PACKAGE INDEX
 
+```sh
 sudo apt update
-
-</br>
+```
 
 ### INSTALL JAVA
 
@@ -28,15 +25,11 @@ sdk use java 17.0.1-open
 
 <code style="color: green">*Restart Terminal*</code>
 
-</br>
-
 ### INSTALL MAVEN
 
 ```sh
 sudo apt install maven
 ```
-
-</br>
 
 ### INSTALL SPRING BOOT
 
@@ -47,8 +40,6 @@ curl -s https://get.sdkman.io | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install springboot
 ```
-
-</br>
 
 ### CHECK INSTALLATION OF JAVA, MAVEN AND SPRING BOOT
 
@@ -64,11 +55,9 @@ spring --version
 
 </br>
 
----
-
 ## FRONTEND SETUP GUIDE FOR WSL
 
----
+</br>
 
 <code style="color: green">*Run the following commands one at the time in a new terminal within the folder ./frontend*</span>
 
@@ -78,7 +67,7 @@ spring --version
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
 
-**Restart Terminal**
+<code style="color: green">*Restart Terminal**</span>
 
 ### INSTALL LATEST LTS Version of Node.js
 
@@ -93,6 +82,6 @@ node -v
 npm -v
 ```
 
-```go
-// CONGRATS! YOUR FRONTEND IS NOW READY TO RUN**
-```
+</br>
+
+**CONGRATS! YOUR FRONTEND IS NOW READY TO RUN**
