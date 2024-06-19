@@ -59,17 +59,21 @@ spring --version
 
 </br>
 
-<code style="color: green">*Run the following commands one at the time in a new terminal within the folder ./frontend*</span>
+<code style="color: green">*Run the following commands one at the time in a new terminal within the folder ./frontend*</code>
 
 ### INSTALL NVM (Node Version Manager)
 
-`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash`
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+```
 
 <code style="color: green">*Restart Terminal*</span>
 
 ### INSTALL LATEST LTS Version of Node.js
 
-`nvm install --lts`
+```sh
+nvm install --lts
+```
 
 ### CHECK INSTALLATION OF NODE and NPM (Node Package Manager)
 
