@@ -3,37 +3,47 @@ package com.atom.springboot.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import com.atom.springboot.entities.City;
-import com.atom.springboot.services.CityService;
+import com.atom.springboot.entities.Bank;
+import com.atom.springboot.services.BankService;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class HomeController {
     
     @Autowired
-    CityService cityService;
+    BankService bankService;
 
-    @GetMapping("sayhello")
-    public String sayHello(){
-        return "Hello User";
+    @GetMapping("getbanks")
+    public List<Bank> getBanks(){
+        return bankService.getBanks();
     }
 
-    @GetMapping("getcities")
-    public List<City> getCities(){
-        return cityService.getCities();
+    @PostMapping("addbank")
+    public Bank SaveBank(@RequestBody Bank bank){
+        return bankService.saveBank(bank);
     }
 
-    @PostMapping("addcity")
-    public City SaveCity(@RequestBody City city){
-        return cityService.saveCity(city);
+    @GetMapping("getbank")
+    public Bank getBank(String bankname){
+        return bankService.getBank(bankname);
     }
 
-    @GetMapping("getcity")
-    public City getCity(String cityname){
-        return cityService.getCity(cityname);
+    @DeleteMapping("deletebank/{id}")
+    public ResponseEntity<String> deleteBank(@PathVariable Long id) {
+        boolean isRemoved = bankService.deleteBank(id);
+        if (!isRemoved) {
+            return new ResponseEntity<>("Bank not found", HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>("Bank deleted successfully", HttpStatus.OK);
     }
  }
